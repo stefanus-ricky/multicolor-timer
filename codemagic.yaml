@@ -7,9 +7,9 @@ workflows:
         XCODE_WORKSPACE: "value here"
         XCODE_SCHEME: "value here"
         # iOS automatic code signing
-        APP_STORE_CONNECT_ISSUER_ID: Encrypted(...)
-        APP_STORE_CONNECT_KEY_IDENTIFIER: Encrypted(...)
-        APP_STORE_CONNECT_PRIVATE_KEY: Encrypted(...)
+        APP_STORE_CONNECT_ISSUER_ID: 123412341234
+        APP_STORE_CONNECT_KEY_IDENTIFIER: 123412341234
+        APP_STORE_CONNECT_PRIVATE_KEY: 123412341234
       xcode: latest
       node: latest
       npm: latest
