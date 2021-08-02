@@ -1,0 +1,27 @@
+{
+    "presets": [
+        "module:metro-react-native-babel-preset",
+        "@babel/preset-typescript"
+    ],
+    "plugins": [
+        [
+            "@babel/plugin-proposal-private-methods",
+                {
+                    "loose": true
+                }
+        ],
+        [
+            "@babel/proposal-class-properties",
+                {
+                    "loose": true
+                }
+        ],
+        [
+            "@babel/proposal-object-rest-spread",
+                {
+                    "loose": true
+                }
+        ]
+
+    ]
+}

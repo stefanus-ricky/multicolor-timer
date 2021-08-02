@@ -1,13 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, Platform} from 'react-native';
+import HomeScreen from './screen/HomeScreen'
+import Sandbox from "./component/Sandbox"
+import {TimerProvider} from "./context/TimerContext";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={[styles.container, styles.droidSafeArea]}>
+      <TimerProvider>
+        <HomeScreen />
+        {/* <Sandbox/> */}
+        <StatusBar style="auto" />
+      </TimerProvider>
+    </SafeAreaView>
   );
 }
 
@@ -18,4 +24,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  droidSafeArea: {
+    paddingTop: Platform.OS === 'android' ? 25 : 0
+},
 });
