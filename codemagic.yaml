@@ -4,7 +4,7 @@ workflows:
     max_build_duration: 60
     environment:
       vars:
-        XCODE_WORKSPACE: ""YOUR_WORKSPACE_NAME.xcworkspace""
+        XCODE_WORKSPACE: "YOUR_WORKSPACE_NAME.xcworkspace"
         XCODE_SCHEME: "YOUR_SCHEME_NAME"
         # iOS automatic code signing
         APP_STORE_CONNECT_ISSUER_ID: 123412341234
