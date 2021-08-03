@@ -4,8 +4,8 @@ workflows:
     max_build_duration: 60
     environment:
       vars:
-        XCODE_WORKSPACE: "value here"
-        XCODE_SCHEME: "value here"
+        XCODE_WORKSPACE: ""YOUR_WORKSPACE_NAME.xcworkspace""
+        XCODE_SCHEME: "YOUR_SCHEME_NAME"
         # iOS automatic code signing
         APP_STORE_CONNECT_ISSUER_ID: 123412341234
         APP_STORE_CONNECT_KEY_IDENTIFIER: 123412341234
@@ -28,7 +28,7 @@ workflows:
             - |
                 # build iOS
                 cd ios
-                pod install
+                pod install --repo-update
                 xcode-project build-ipa --project "MyXcodeProject.xcodeproj" --scheme "MyScheme"
     artifacts:
       - build/**/outputs/**/*.aab
