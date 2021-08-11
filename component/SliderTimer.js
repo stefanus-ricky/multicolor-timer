@@ -9,7 +9,6 @@ import {TimerContext} from '../context/TimerContext'
 
 // import Switch from "react-switch";
 // import ToggleSwitch from 'toggle-switch-react-native'
-import useTimer from '../lib/useTimer';
 import CustomSlider from './CustomSlider'
 
 
@@ -36,7 +35,6 @@ function Thumb (){
 
 
 export default function SliderTimer() {
-  // const { timer, isActive, isPaused, handleStart, handlePause, handleResume, handleReset } = useTimer(0)
   const {
     currentTime, setCurrentTime, 
     stopwatchTimer,
@@ -72,10 +70,10 @@ export default function SliderTimer() {
     setChecked(false)
     setIsActive(false)
     // reset slider
-    setSliderValue(()=>[0])
     let time = Date.now() - startTime + stopwatchTimer[currentColor]
     stopwatchTimer[currentColor] = time
     // console.log({time})
+    setSliderValue(()=>[0])
     setIsSliderDisabled(false)
     // console.log("pause")
   }
@@ -115,7 +113,11 @@ const options = {
 
     return (
       <View style={styles.mainContainer}>
-          {/* timer and slider collumn */}
+          {/* 
+          
+          Timer and slider collumn 
+          
+          */}
           <View style={styles.secondaryContainer}>
             <View style={styles.timerSliderContainer}>
               <View style={styles.timer}>
@@ -129,7 +131,11 @@ const options = {
             </View>
 
 
-            {/* pause and stop button collumn */}
+            {/* 
+            
+            Pause and stop button collumn 
+            
+            */}
             <View style={styles.pauseStopContainer}>
               {isDefaultState || 
               <TouchableOpacity style={{}}>
@@ -205,7 +211,8 @@ const styles = StyleSheet.create({
     // alignSelf:"flex-start",
     backgroundColor:"transparent",
     padding:10 ,
-    height:100
+    height:100,
+    marginBottom:15
   },
   toggleSlider:{
     backgroundColor:"transparent",
