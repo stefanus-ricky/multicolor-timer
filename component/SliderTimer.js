@@ -212,7 +212,7 @@ const styles = StyleSheet.create({
     backgroundColor:"transparent",
     padding:10 ,
     height:100,
-    marginBottom:15
+    marginBottom:25
   },
   toggleSlider:{
     backgroundColor:"transparent",
